@@ -1,5 +1,4 @@
- 
-   class usuario{
+class usuario{
     
     constructor ( nombre, apellido, email, contrasena){
         
@@ -10,10 +9,8 @@
         this.activo = true ;  
     }
 
-    mostrarBiembenida(){
-
-    alert("Bienvenido " +this.nombre+"  "+this.apellido+ "\n"
-    +"su email es "+this.email + "\n"
-    +"su estado es "+this.activo);        
+    saludar() {
+       
+        alert(` Bienvenido ${this.nombre} ${this.apellido} \n Ha sido registrado con el email ${this.email} \n Su estado es ${this.activo}`);
     }
-}  
+}
