@@ -1,3 +1,5 @@
+
+
 class usuario{
     
     constructor ( nombre, apellido, email, contrasena){
