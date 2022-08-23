@@ -12,7 +12,23 @@ class usuario{
     }
 
     saludar() {
+
        
-        alert(` Bienvenido ${this.nombre} ${this.apellido} \n Ha sido registrado con el email ${this.email} \n Su estado es ${this.activo}`);
+
+        Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: ` Bienvenido ${this.nombre} ${this.apellido} \n Ha sido registrado con el email ${this.email} \n Su estado es ${this.activo}`,
+        showConfirmButton: false,
+        timer: 3500
+        
+        })  
+       
+        
     }
 }
+
+
+
+
+  

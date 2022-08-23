@@ -32,9 +32,24 @@ function comprobarSiEmailYaExiste( email ) {
     const usuario = usuariosRegistrados.find( usuario => usuario.email === email );
 
      if ( usuario ) {
+        
         const mensaje = "El usuario ya está registrado";
-        alert( mensaje ); 
-        throw mensaje;
+        
+        Swal.fire({
+            title: (mensaje),
+            allowOutsideClick: () => {
+              const popup = Swal.getPopup()
+              popup.classList.remove('swal2-show')
+              setTimeout(() => {
+                popup.classList.add('animate__animated', 'animate__headShake')
+              })
+              setTimeout(() => {
+                popup.classList.remove('animate__animated', 'animate__headShake')
+              }, 500)
+              return false
+            }
+          })
+            throw mensaje;
     } 
 }
 
